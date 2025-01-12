@@ -1,0 +1,34 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.4.1'
+	id 'io.spring.dependency-management' version '1.1.7' // manages the dependency versions for you
+
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT' // version of your spring boot application
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
+
+repositories {
+	mavenCentral() // referencing this repository:  https://repo.maven.apache.org/maven2/
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web' // provides tools needed to build MVC and Rest APIs, embedded web server (TomCat), support for JSON processing
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa' // provides tools needed to persist data
+	implementation 'org.postgresql:postgresql' // Ensure this is the latest stable version
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test' // provides tools needed to write and create tests for Spring applications (JUnit, AssertJ, Mockito, H2 Embedded Database, etc.)
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher' // discovery and execution of JUnit tests
+
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform() // tells gradle to execute JUnit tests under src/test
+}
