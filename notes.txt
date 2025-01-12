@@ -1,0 +1,39 @@
+
+Lets first create our springboot project, for that we will go to spring initializer website
+
+Gradle & Maven: build automation tool that manages dependencies, and various tasks that are used for software development
+
+gradle - boiler plate files used by gradle
+idea - files used by IDE
+
+main focus:
+1. src
+2. build.gradle
+
+build.gradle - script used to define: plugins, dependencies, tasks and other configuration needed to build and run the application
+src - folder that contains main (main code) and test (test code) folders
+
+
+DemoApplication - is the main entry point of our Springboot application
+@SpringBootApplication - Convenience annotation that combines @SpringBootConfiguration, @EnableAutoConfiguration, @ComponentScan
+@SpringBootConfiguration - classes annotated with this can define beans using @Bean
+@EnableAutoConfiguration - automatically configure beans based on: depdendencies and properties file
+For example:
+If you include spring-boot-starter-web, it automatically configures a web server (e.g., Tomcat).
+If you include spring-boot-starter-data-jpa, it configures Hibernate and a DataSource.
+@ComponentScan - Enables component scanning for Spring components (e.g., @Component, @Service, @Repository, @Controller) in the package where the class resides and its sub-packages
+
+
+Main ways to create beans:
+1. @Configuration + @Bean (BeanConfiguration.class, Human.class)
+2. @Component (Pet.class)
+
+Main ways to inject beans:
+1. Field Injection
+2. Constructor Injection
+3. Setter Injection
+
+When multiple beans are found with the same interface, use:
+1. @Primary
+2. Put nicknames for @Bean("xxx") or @Component("xxx") and add @Qualifier("xxx") when autowiring
+ - @Component qualifiers are set by default, @Bean qualifiers are not set by default
