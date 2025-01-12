@@ -37,3 +37,11 @@ When multiple beans are found with the same interface, use:
 1. @Primary
 2. Put nicknames for @Bean("xxx") or @Component("xxx") and add @Qualifier("xxx") when autowiring
  - @Component qualifiers are set by default, @Bean qualifiers are not set by default
+
+
+Project architecture:
+1. Controller - Manages HTTP traffic (request and response)
+2. Service - Business logic
+3. Repository - Database interaction, external system
+
+
