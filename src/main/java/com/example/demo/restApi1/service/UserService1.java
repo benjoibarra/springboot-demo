@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class UserService {
+public class UserService1 {
     List<UserResponse> userList = new ArrayList<>(); // temporary user datasource
 
     public UserResponse getUser(Long id) {

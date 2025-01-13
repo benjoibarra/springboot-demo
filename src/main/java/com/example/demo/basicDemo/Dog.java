@@ -1,8 +1,9 @@
 package com.example.demo.basicDemo;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-
+@Scope("prototype")
 @Component("dog")
 public class Dog implements Animal {
     private String name;
