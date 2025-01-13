@@ -1,6 +1,5 @@
 package com.example.demo.basicDemo;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
