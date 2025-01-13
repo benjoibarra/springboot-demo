@@ -2,12 +2,12 @@ package com.example.demo.restApi1.service;
 
 import com.example.demo.restApi1.model.UserRequest;
 import com.example.demo.restApi1.model.UserResponse;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+@Service
 public class UserService1 {
     List<UserResponse> userList = new ArrayList<>(); // temporary user datasource
 
