@@ -1,5 +1,15 @@
-The Spring Framework is a powerful, open-source framework for building Java applications.
-It provides a wide range of tools and features to simplify enterprise application development
+Hello and welcome to our first-ever TekTok session!
+I’m excited to kick off this weekly technology brownbag series, where I’ll be sharing insights on various tech topics.
+I hope you find these sessions both informative and engaging. Let’s get started, and today’s topic is Spring Boot!
+
+
+Plumbing:
+are the essential but non-business-critical infrastructure that the framework provides out-of-the-box.
+This includes things like dependency injection, transaction management, data access, security, and messaging.
+Which are traditionally done manually by developers, which takes a lot of time and effort...
+
+Essentially, Spring framework does most of the dirty work and the heavy work for you so you can focus on more important things
+like building your application...
 
 Spring Boot is an extension of the Spring Framework that makes it easier and faster to build Java applications by
 providing pre-configured setups, so you don't have to manually configure everything.
@@ -22,7 +32,8 @@ You can still customize it (change the color, upgrade the tires), but you don’
 
 Lets first create our springboot project, for that we will go to spring initializer website
 
-Gradle & Maven: build automation tool that manages dependencies, and various tasks that are used for software development
+Gradle & Maven: are both build automation tools used in software development to manage dependencies, compile code, run tests, create packages,
+and handle other aspects of the build lifecycle. They both help in automating the repetitive tasks associated with building, testing, and deploying software.
 
 gradle - boiler plate files used by gradle
 idea - files used by IDE
@@ -36,6 +47,14 @@ src - folder that contains main (main code) and test (test code) folders
 
 
 DemoApplication - is the main entry point of our Springboot application
+
+The SpringApplication.run() method starts the Spring Boot application.
+It initializes the Spring ApplicationContext, which is the core container for all Spring-managed beans.
+
+Managing Beans: Creates, configures, and manages the lifecycle of beans (objects annotated with @Component, @Service, etc.).
+Dependency Injection: Resolves and injects dependencies between beans automatically.
+
+
 @SpringBootApplication - Convenience annotation that combines @SpringBootConfiguration, @EnableAutoConfiguration, @ComponentScan
 @SpringBootConfiguration - classes annotated with this can define beans using @Bean
 @EnableAutoConfiguration - automatically configure beans based on: depdendencies and properties file
@@ -64,5 +83,7 @@ Project architecture:
 1. Controller - Manages HTTP traffic (request and response)
 2. Service - Business logic
 3. Repository - Database interaction, external system
+
+@Entity - Used to mark a Java class as a persistent entity that maps to a database table
 
 

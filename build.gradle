@@ -20,6 +20,7 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web' // provides tools needed to build MVC and Rest APIs, embedded web server (TomCat), support for JSON processing
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa' // provides tools needed to persist data
+	implementation 'org.springframework.boot:spring-boot-starter-validation' //
 	implementation 'org.postgresql:postgresql' // Ensure this is the latest stable version
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test' // provides tools needed to write and create tests for Spring applications (JUnit, AssertJ, Mockito, H2 Embedded Database, etc.)
