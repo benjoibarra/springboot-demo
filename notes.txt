@@ -86,4 +86,35 @@ Project architecture:
 
 @Entity - Used to mark a Java class as a persistent entity that maps to a database table
 
+==================================================================
+JPA (Java Persistence API) - is a specification in Java that provides a set of guidelines for managing relational data in Java applications.
+With JPA, you can:
 
+Map Java objects to database tables: JPA uses annotations to map Java classes to database tables and their properties to table columns.
+This is called object-relational mapping (ORM).
+
+Handle CRUD operations: JPA simplifies Create, Read, Update, and Delete operations, reducing the need for boilerplate SQL code.
+
+Query database using JPQL (Java Persistence Query Language): JPQL is similar to SQL but operates on entities rather than database tables, allowing for more object-oriented querying.
+
+Manage entity relationships: JPA makes it easy to define relationships between entities such as One-to-One, One-to-Many, and Many-to-Many.
+
+Automatic persistence management: JPA provides an EntityManager to handle transactions, persist data, and query the database.
+
+
+>>> JPA is a Specification, Hibernate is an Implementation
+ - JPA (Java Persistence API)
+is a specification that defines a standard set of rules, guidelines, and APIs for object-relational mapping (ORM) in Java.
+It provides an abstraction layer for dealing with relational databases using Java objects (entities).
+
+ - Hibernate is a framework that provides an implementation of the JPA specification,
+ along with additional features beyond JPA. In other words, Hibernate is a JPA provider,
+ meaning it adheres to the JPA standard but also adds its own proprietary features that extend beyond the specification.
+
+
+Flexibility: By depending on an interface rather than a concrete class, you decouple your classes.
+This means that your code doesn't directly rely on a specific implementation,
+making it easier to change implementations without modifying the dependent class.
+
+Ease of replacement: You can swap out the implementation of an interface without changing the classes that depend on it.
+This is particularly useful when switching to a new implementation or mocking implementations in unit tests.

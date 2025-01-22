@@ -53,6 +53,6 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(MaxUserCountException.class)
     public ResponseEntity<ErrorResponse> handleMaxUserCountException(MaxUserCountException ex) {
-        return new ResponseEntity<>(new ErrorResponse("Max user count reached!", null), HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(new ErrorResponse("Max user count reached!", null), HttpStatus.BAD_REQUEST);
     }
 }
