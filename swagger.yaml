@@ -44,6 +44,19 @@ paths:
                   errorDetails:
                     type: object
                     additionalProperties: true
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Invalid input!"
+                  errorDetails:
+                    type: object
+                    additionalProperties: true
 
     delete:
       summary: Delete a user by ID
@@ -81,6 +94,19 @@ paths:
                   message:
                     type: string
                     example: "User id not found!"
+                  errorDetails:
+                    type: object
+                    additionalProperties: true
+        '400':
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Invalid input!"
                   errorDetails:
                     type: object
                     additionalProperties: true
@@ -150,7 +176,7 @@ paths:
                 properties:
                   message:
                     type: string
-                    example: "Invalid input for fName and/or lName fields!"
+                    example: "Invalid input!"
                   errorDetails:
                     type: object
                     additionalProperties: true
@@ -196,7 +222,7 @@ paths:
                 properties:
                   message:
                     type: string
-                    example: "Invalid input for fName and/or lName fields!"
+                    example: "Invalid input!"
                   errorDetails:
                     type: object
                     additionalProperties: true
